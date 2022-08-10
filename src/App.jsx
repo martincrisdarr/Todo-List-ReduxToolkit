@@ -4,11 +4,12 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 function App() {
   
   return (
-    <div >
+    <div className='w-full h-screen bg-neutral-900' >
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<TaskList/>}></Route>
           <Route path='/create-task' element={<TaskForm/>}></Route>
+          <Route path='/edit-task/:id' element={<TaskForm/>}></Route>
         </Routes>
       </BrowserRouter>
     </div>
